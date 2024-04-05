@@ -68,6 +68,9 @@ namespace MqttSubscribeVisualization
         // 主题风格全局变量
         public UIStyle UiStyle = UIStyle.Blue;
 
+        // 折线图数据点计数器
+        public int IndexLineChart = 0;
+
         /// <summary>
         /// 使用指定的参数连接MQTT服务器
         /// </summary>
@@ -176,9 +179,13 @@ namespace MqttSubscribeVisualization
                 uiBarChart.Update(topic, 0, value);
                 uiBarChart.Refresh();
                 // 添加折线图数据
-                this.uiLineChart.Option.AddData("Topic", dateTime, value);
-                // 设置X轴的显示范围为60秒以内
-                this.uiLineChart.Option.XAxis.SetRange(dateTime.AddSeconds(-60).ZeroMillisecond(), dateTime.ZeroMillisecond());
+                this.uiLineChart.Option.AddData("Topic", IndexLineChart, value);
+                // 设置X轴的显示范围为100个点以内的最新数据
+                if (IndexLineChart > 100)
+                {
+                    this.uiLineChart.Option.XAxis.SetRange(IndexLineChart-100, IndexLineChart);
+                }
+                IndexLineChart++;
                 // 更新折线图显示
                 this.uiLineChart.Refresh();
             }));
@@ -286,13 +293,12 @@ namespace MqttSubscribeVisualization
             };
 
             // 新增曲线，并设置曲线显示最大点数，超过后自动清理
-            optionLineChart.AddSeries(new UILineSeries("Topic")).SetMaxCount(66);
+            optionLineChart.AddSeries(new UILineSeries("Topic")).SetMaxCount(101);
             // 坐标轴设置
-            optionLineChart.XAxis.Name = "时间";
+            optionLineChart.XAxis.Name = "点数";
             optionLineChart.YAxis.Name = "数值";
-            // 坐标轴显示日期格式
-            optionLineChart.XAxisType = UIAxisType.DateTime;
-            optionLineChart.XAxis.AxisLabel.DateTimeFormat = "HH:mm:ss";
+            // 坐标轴显示小数位数
+            optionLineChart.XAxis.AxisLabel.DecimalPlaces = 0;
             // 坐标轴显示小数位数
             optionLineChart.YAxis.AxisLabel.DecimalPlaces = 0;
             optionLineChart.ToolTip.Visible = true;
@@ -315,6 +321,9 @@ namespace MqttSubscribeVisualization
             Mqtt_UserName = "siot";
             Mqtt_PassWord = "dfrobot";
             Mqtt_ClientId = "MyClient";
+
+            // 折线图数据点计数器
+            IndexLineChart = 0;
 
             // 使用MQTTnet连接MQTT服务器
             MqttClientStop();
