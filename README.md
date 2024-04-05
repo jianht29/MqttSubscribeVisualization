@@ -6,7 +6,7 @@
 
 ![输入图片说明](https://gitee.com/jianht29/MqttSubscribeVisualization/raw/master/MqttSubscribeVisualization1.png)
 
-![输入图片说明](https://gitee.com/jianht29/MqttSubscribeVisualization/raw/master/MqttSubscribeVisualization1.png)
+![输入图片说明](https://gitee.com/jianht29/MqttSubscribeVisualization/raw/master/MqttSubscribeVisualization2.png)
 
 1.MQTTnet是一个高性能的.NET库。用于连接MQTT服务器，订阅主题和向主题发布消息。
 
