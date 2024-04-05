@@ -53,7 +53,7 @@
             this.uiBarChart.Location = new System.Drawing.Point(3, 3);
             this.uiBarChart.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiBarChart.Name = "uiBarChart";
-            this.uiBarChart.Size = new System.Drawing.Size(951, 356);
+            this.uiBarChart.Size = new System.Drawing.Size(1014, 359);
             this.uiBarChart.SubFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiBarChart.TabIndex = 0;
             this.uiBarChart.Text = "uiBarChart";
@@ -69,7 +69,7 @@
             this.uiLineChart.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiLineChart.MouseDownType = Sunny.UI.UILineChartMouseDownType.Zoom;
             this.uiLineChart.Name = "uiLineChart";
-            this.uiLineChart.Size = new System.Drawing.Size(951, 352);
+            this.uiLineChart.Size = new System.Drawing.Size(1014, 355);
             this.uiLineChart.SubFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLineChart.TabIndex = 1;
             this.uiLineChart.Text = "uiLineChart";
@@ -115,7 +115,7 @@
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 35);
+            this.splitContainer1.Location = new System.Drawing.Point(2, 36);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -126,19 +126,22 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.uiLineChart);
-            this.splitContainer1.Size = new System.Drawing.Size(957, 724);
-            this.splitContainer1.SplitterDistance = 362;
+            this.splitContainer1.Size = new System.Drawing.Size(1020, 730);
+            this.splitContainer1.SplitterDistance = 365;
             this.splitContainer1.TabIndex = 3;
             // 
             // FormMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(957, 759);
+            this.ClientSize = new System.Drawing.Size(1024, 768);
             this.ContextMenuStrip = this.uiContextMenuStrip;
             this.Controls.Add(this.splitContainer1);
             this.ExtendBox = true;
             this.ExtendMenu = this.uiContextMenuStrip;
+            this.MaximumSize = new System.Drawing.Size(4096, 2160);
             this.Name = "FormMain";
+            this.Padding = new System.Windows.Forms.Padding(2, 36, 2, 2);
+            this.ShowDragStretch = true;
             this.ShowTitleIcon = true;
             this.Text = "MQTT订阅信息可视化";
             this.ZoomScaleRect = new System.Drawing.Rectangle(22, 22, 1341, 701);
