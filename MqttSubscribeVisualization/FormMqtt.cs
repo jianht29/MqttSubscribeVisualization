@@ -34,18 +34,18 @@ namespace MqttSubscribeVisualization
 
         private void FormMqtt_Load(object sender, EventArgs e)
         {
-            this.Style = formMain.UiStyle;
-            this.uiLabel1.Style = formMain.UiStyle;
-            this.uiLabel2.Style = formMain.UiStyle;
-            this.uiLabel3.Style = formMain.UiStyle;
-            this.uiLabel4.Style = formMain.UiStyle;
-            this.uiTextBox1.Style = formMain.UiStyle;
-            this.uiTextBox2.Style = formMain.UiStyle;
-            this.uiTextBox3.Style = formMain.UiStyle;
-            this.uiTextBox4.Style = formMain.UiStyle;
-            this.uiButton1.Style = formMain.UiStyle;
-            this.uiButton2.Style = formMain.UiStyle;
-            this.uiLine1.Style = formMain.UiStyle;
+            //this.Style = formMain.UiStyle;
+            //this.uiLabel1.Style = formMain.UiStyle;
+            //this.uiLabel2.Style = formMain.UiStyle;
+            //this.uiLabel3.Style = formMain.UiStyle;
+            //this.uiLabel4.Style = formMain.UiStyle;
+            //this.uiTextBox1.Style = formMain.UiStyle;
+            //this.uiTextBox2.Style = formMain.UiStyle;
+            //this.uiTextBox3.Style = formMain.UiStyle;
+            //this.uiTextBox4.Style = formMain.UiStyle;
+            //this.uiButton1.Style = formMain.UiStyle;
+            //this.uiButton2.Style = formMain.UiStyle;
+            //this.uiLine1.Style = formMain.UiStyle;
             this.uiTextBox1.Text = formMain.Mqtt_Server;
             this.uiTextBox2.Text = Convert.ToString(formMain.Mqtt_Port);
             this.uiTextBox3.Text = formMain.Mqtt_UserName;

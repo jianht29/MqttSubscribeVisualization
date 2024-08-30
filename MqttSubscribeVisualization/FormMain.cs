@@ -306,12 +306,14 @@ namespace MqttSubscribeVisualization
 
             // 设置默认的主题风格
             UiStyle = UIStyle.DarkBlue;
-            this.Style = UiStyle;
+            // 使用StyleManager统一设置控件主题风格
+            uiStyleManager.Style = UiStyle;
+            //this.Style = UiStyle;
             this.uiLineChart.ChartStyleType = UIChartStyleType.LiveChart;
-            this.uiLineChart.Style = UiStyle;
+            //this.uiLineChart.Style = UiStyle;
             this.uiBarChart.ChartStyleType = UIChartStyleType.LiveChart;
-            this.uiBarChart.Style = UiStyle;
-            this.uiContextMenuStrip.Style = UiStyle;
+            //this.uiBarChart.Style = UiStyle;
+            //this.uiContextMenuStrip.Style = UiStyle;
             this.uiBarChart.Refresh();
             this.uiLineChart.Refresh();
 
@@ -344,12 +346,14 @@ namespace MqttSubscribeVisualization
         {
             // 设置深色主题风格
             UiStyle = UIStyle.DarkBlue;
-            this.Style = UiStyle;
+            // 使用StyleManager统一设置控件主题风格
+            uiStyleManager.Style = UiStyle;
+            //this.Style = UiStyle;
             this.uiLineChart.ChartStyleType = UIChartStyleType.LiveChart;
-            this.uiLineChart.Style = UiStyle;
+            //this.uiLineChart.Style = UiStyle;
             this.uiBarChart.ChartStyleType = UIChartStyleType.LiveChart;
-            this.uiBarChart.Style = UiStyle;
-            this.uiContextMenuStrip.Style = UiStyle;
+            //this.uiBarChart.Style = UiStyle;
+            //this.uiContextMenuStrip.Style = UiStyle;
             this.uiBarChart.Refresh();
             this.uiLineChart.Refresh();
         }
@@ -358,12 +362,14 @@ namespace MqttSubscribeVisualization
         {
             // 设置浅色主题风格
             UiStyle = UIStyle.Blue;
-            this.Style = UiStyle;
+            // 使用StyleManager统一设置控件主题风格
+            uiStyleManager.Style = UiStyle;
+            //this.Style = UiStyle;
             this.uiLineChart.ChartStyleType = UIChartStyleType.Plain;
-            this.uiLineChart.Style = UiStyle;
+            //this.uiLineChart.Style = UiStyle;
             this.uiBarChart.ChartStyleType = UIChartStyleType.Plain;
-            this.uiBarChart.Style = UiStyle;
-            this.uiContextMenuStrip.Style = UiStyle;
+            //this.uiBarChart.Style = UiStyle;
+            //this.uiContextMenuStrip.Style = UiStyle;
             this.uiBarChart.Refresh();
             this.uiLineChart.Refresh();
         }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.uiBarChart = new Sunny.UI.UIBarChart();
             this.uiLineChart = new Sunny.UI.UILineChart();
             this.uiContextMenuStrip = new Sunny.UI.UIContextMenuStrip();
@@ -36,6 +37,7 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItemMqtt = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.uiStyleManager = new Sunny.UI.UIStyleManager(this.components);
             this.uiContextMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -167,6 +169,7 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemMqtt;
+        private Sunny.UI.UIStyleManager uiStyleManager;
     }
 }
 
